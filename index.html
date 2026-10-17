@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Band-Website – Konzept-Entwurf (Crossover · Hip Hop · Punk · Rock)</title>
+<meta name="description" content="Unverbindlicher Konzept-Entwurf einer Band-Website: Musik, Live-Termine, Media, Booking und Merch. Alle Inhalte sind Platzhalter.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--ink:#f3f1ea;--mut:#8f8b80;--acid:#d7ff1f;--hot:#ff2e63;--cy:#2ef2ff;--line:#26252a}
+*{box-sizing:border-box;margin:0;padding:0}html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto}
+html{overflow-x:clip}body{background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.wrap{width:min(1240px,92%);margin:auto}
+h1,h2,h3,.big{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.9}
+body:after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:200;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(4) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}}
+.flag{background:var(--acid);color:#000;font-size:.78rem;font-weight:700;text-align:center;padding:.45rem 1rem;position:relative;z-index:60}
+header{position:fixed;top:32px;left:0;right:0;z-index:50;transition:top .3s,background .3s}
+header.s{top:0;background:rgba(10,10,11,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:Anton;font-size:1.35rem;letter-spacing:.03em}.logo b{color:var(--acid);font-weight:400}
+nav{display:flex;gap:1.4rem;font-size:.86rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+nav a{opacity:.7;transition:.2s}nav a:hover{opacity:1;color:var(--acid)}
+.cta{background:var(--hot);color:#fff;padding:.65rem 1.1rem;border-radius:4px;font-weight:700;text-transform:uppercase;font-size:.82rem;letter-spacing:.08em;border:0;display:inline-flex;gap:.5rem;align-items:center;transition:transform .2s}
+.cta:hover{transform:translateY(-2px) rotate(-1deg)}
+.cta.ac{background:var(--acid);color:#000}
+.burger{display:none;background:none;border:0;color:var(--ink);font-size:1.6rem}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:120px 0 60px}
+#eq{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 30% 40%,rgba(255,46,99,.28),transparent 70%),radial-gradient(50% 45% at 75% 65%,rgba(46,242,255,.18),transparent 70%);z-index:1}
+.hin{position:relative;z-index:2;text-align:center}
+.kick{display:inline-block;border:1px solid var(--acid);color:var(--acid);padding:.35rem .8rem;font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(3.6rem,13vw,12.5rem);position:relative}
+.hero h1 span{display:block}
+.hero h1 .o{-webkit-text-stroke:2px var(--ink);color:transparent}
+.hero h1 .g{position:relative}
+.hero h1 .g:before,.hero h1 .g:after{content:attr(data-t);position:absolute;inset:0;mix-blend-mode:screen}
+.hero h1 .g:before{color:var(--hot);transform:translate(-4px,2px);animation:gl 3s infinite steps(1)}
+.hero h1 .g:after{color:var(--cy);transform:translate(4px,-2px);animation:gl 3s infinite steps(1) reverse}
+@keyframes gl{0%,92%,100%{clip-path:inset(0 0 0 0);opacity:.0}93%{clip-path:inset(20% 0 55% 0);opacity:1}95%{clip-path:inset(60% 0 10% 0);opacity:1}97%{clip-path:inset(5% 0 80% 0);opacity:1}}
+.sub{margin:1.6rem auto 2rem;max-width:560px;color:#cfccc2;font-size:1.08rem}
+.hbtn{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.ghost{border:1px solid #fff4;color:#fff;background:transparent}
+.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;font-size:.72rem;letter-spacing:.3em;color:var(--mut)}
+/* marquee */
+.mq{background:var(--acid);color:#000;overflow:hidden;white-space:nowrap;transform:rotate(-2deg);margin:-20px 0 0;position:relative;z-index:5;border-block:3px solid #000}
+.mq div{display:inline-block;font-family:Anton;font-size:2.4rem;padding:.6rem 0}
+.mq i{font-style:normal;color:var(--hot);padding:0 1.2rem}
+section{padding:120px 0;position:relative}
+.lab{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase;color:var(--acid);font-weight:700;margin-bottom:1rem;display:flex;gap:.7rem;align-items:center}
+.lab:before{content:"";width:28px;height:2px;background:var(--acid)}
+h2{font-size:clamp(3rem,8vw,6.8rem);margin-bottom:2.2rem}
+h2 em{font-style:normal;color:var(--hot)}
+.rv{opacity:0;transform:translateY(40px)}
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.about p{color:#cfccc2;font-size:1.1rem;margin-bottom:1rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.stats div{border-top:2px solid var(--line);padding-top:.8rem}.stats b{font-family:Anton;font-size:2.6rem;color:var(--acid);display:block;font-weight:400}
+.stats span{font-size:.8rem;color:var(--mut);text-transform:uppercase;letter-spacing:.1em}
+.poster{aspect-ratio:4/5;position:relative;background:#111;border:1px solid var(--line);overflow:hidden;transform:rotate(2deg)}
+.poster .ph{position:absolute;inset:0;background:conic-gradient(from 210deg at 60% 40%,#ff2e63,#2a0a14 30%,#0a0a0b 50%,#0d2b30 70%,#2ef2ff 90%,#ff2e63)}
+.poster .ph:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#0006 0 2px,transparent 2px 5px)}
+.poster .sil{position:absolute;bottom:0;left:0;right:0;height:72%;display:flex;align-items:flex-end;justify-content:center;gap:3%}
+.poster .sil i{background:#000;border-radius:48% 48% 0 0/30% 30% 0 0;width:19%;display:block;position:relative}
+.poster .sil i:before{content:"";position:absolute;left:50%;top:-24%;width:62%;aspect-ratio:1;border-radius:50%;background:#000;transform:translateX(-50%)}
+.poster .tag{position:absolute;top:1rem;left:1rem;background:var(--acid);color:#000;font-weight:700;font-size:.72rem;padding:.25rem .5rem;letter-spacing:.1em}
+.poster .tag2{position:absolute;bottom:1rem;right:1rem;font-family:Anton;font-size:2.2rem;color:var(--acid);transform:rotate(-6deg)}
+/* music */
+.music{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.cover{aspect-ratio:1;position:relative;overflow:hidden;background:#000;border:1px solid var(--line)}
+.cover .disc{position:absolute;inset:8%;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1d20 2px 4px);box-shadow:0 0 0 1px #333}
+.cover .disc:after{content:"";position:absolute;inset:36%;border-radius:50%;background:linear-gradient(135deg,var(--hot),var(--acid))}
+.cover.on .disc{animation:spin 2.4s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.cover .ct{position:absolute;left:1rem;bottom:1rem;font-family:Anton;font-size:2rem;line-height:1;text-shadow:0 2px 20px #000}
+.cover .ct small{display:block;font-family:"Space Grotesk";font-size:.8rem;color:var(--acid);letter-spacing:.2em}
+.tracks{border-top:1px solid var(--line)}
+.tr{display:grid;grid-template-columns:44px 1fr auto auto;gap:1rem;align-items:center;padding:1rem .4rem;border-bottom:1px solid var(--line);cursor:pointer;transition:background .2s}
+.tr:hover,.tr.on{background:#16161a}
+.tr .pb{width:40px;height:40px;border-radius:50%;border:1px solid #fff4;display:grid;place-items:center;font-size:.8rem}
+.tr.on .pb{background:var(--acid);color:#000;border-color:var(--acid)}
+.tr b{font-size:1.05rem}.tr small{display:block;color:var(--mut);font-size:.8rem}
+.bars{display:flex;gap:2px;height:18px;align-items:flex-end;opacity:0}.tr.on .bars{opacity:1}
+.bars i{width:3px;background:var(--acid);animation:b .8s ease-in-out infinite alternate}
+.bars i:nth-child(2){animation-delay:.2s}.bars i:nth-child(3){animation-delay:.4s}.bars i:nth-child(4){animation-delay:.1s}
+@keyframes b{from{height:3px}to{height:18px}}
+.tr .d{color:var(--mut);font-size:.85rem;font-variant-numeric:tabular-nums}
+.embed{margin-top:1.4rem;border:1px dashed #fff3;padding:1rem 1.2rem;display:flex;gap:1rem;align-items:center;color:var(--mut);font-size:.88rem}
+.embed .sp{width:38px;height:38px;border-radius:50%;background:#1db954;display:grid;place-items:center;color:#000;font-weight:700;flex:none}
+.plats{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.plats a{border:1px solid var(--line);padding:.45rem .8rem;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.plats a:hover{border-color:var(--acid);color:var(--acid)}
+/* live */
+.live{background:var(--ink);color:#0a0a0b}
+.live .lab{color:#0a0a0b}.live .lab:before{background:var(--hot)}
+.gig{display:grid;grid-template-columns:150px 1fr 1fr auto;gap:1.5rem;align-items:center;padding:1.4rem 0;border-bottom:2px solid #0a0a0b;transition:padding .25s}
+.gig:hover{padding-left:1rem}
+.gig .dt{font-family:Anton;font-size:2.2rem;line-height:1}.gig .dt small{display:block;font-family:"Space Grotesk";font-size:.75rem;letter-spacing:.15em;font-weight:700}
+.gig h3{font-size:1.9rem}.gig .vn{color:#555;font-weight:500}
+.gig .tk{background:#0a0a0b;color:var(--acid);padding:.7rem 1.1rem;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;border:0}
+.gig .tk.so{background:transparent;color:#999;border:2px solid #bbb;text-decoration:line-through}
+.gig .typ{display:inline-block;background:var(--hot);color:#fff;font-size:.68rem;font-weight:700;padding:.15rem .45rem;letter-spacing:.1em;margin-left:.5rem;vertical-align:middle;font-family:"Space Grotesk"}
+/* media */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.tile{position:relative;overflow:hidden;background:#151518;cursor:pointer}
+.tile.w{grid-column:span 2}.tile.t{grid-row:span 2}
+.tile .art{position:absolute;inset:0;transition:transform .6s}
+.tile:hover .art{transform:scale(1.08)}
+.tile span{position:absolute;left:.8rem;bottom:.7rem;font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;background:#000a;padding:.2rem .5rem}
+.yt{position:absolute;inset:0;display:grid;place-items:center}
+.yt b{width:74px;height:52px;border-radius:14px;background:#ff0033;display:grid;place-items:center;font-size:1.4rem;box-shadow:0 10px 30px #ff003366}
+.lb{position:fixed;inset:0;background:#000e;z-index:300;display:none;place-items:center;padding:4%}
+.lb.on{display:grid}.lb .in{width:min(900px,100%);aspect-ratio:16/9;position:relative;border:1px solid var(--line)}
+.lb .x{position:absolute;top:-44px;right:0;background:none;border:0;color:#fff;font-size:1.8rem}
+.lb p{position:absolute;bottom:1rem;left:1rem;right:1rem;color:#ccc;font-size:.9rem}
+.ig{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:2.5rem}
+.ig a{aspect-ratio:1;position:relative;overflow:hidden}
+.ig a:after{content:"♥ IG";position:absolute;inset:0;display:grid;place-items:center;background:#ff2e63cc;font-weight:700;opacity:0;transition:.25s}
+.ig a:hover:after{opacity:1}
+/* booking */
+.book{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem}
+.book ul{list-style:none;margin-top:1.4rem}.book li{padding:.7rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;color:#cfccc2}
+.book li b{color:var(--ink)}
+form.bf{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:#121215;border:1px solid var(--line);padding:2rem}
+.bf label{display:flex;flex-direction:column;gap:.35rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.bf .f{grid-column:1/-1}
+.bf input,.bf select,.bf textarea{background:#0a0a0b;border:1px solid var(--line);color:var(--ink);padding:.85rem;font:inherit;font-size:.95rem;border-radius:3px;text-transform:none;letter-spacing:0}
+.bf input:focus,.bf select:focus,.bf textarea:focus{outline:2px solid var(--acid);border-color:transparent}
+.ok{display:none;grid-column:1/-1;background:var(--acid);color:#000;padding:1rem;font-weight:700}
+/* shop */
+.shop{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.prod{background:#121215;border:1px solid var(--line);padding:1rem;transition:transform .3s,border-color .3s}
+.prod:hover{transform:translateY(-6px);border-color:var(--acid)}
+.prod .pi{aspect-ratio:1;display:grid;place-items:center;background:#1a1a1f;margin-bottom:.9rem;position:relative}
+.prod .pi svg{width:72%}
+.prod .badge{position:absolute;top:.6rem;left:.6rem;background:var(--hot);font-size:.68rem;font-weight:700;padding:.2rem .45rem;letter-spacing:.1em}
+.prod h3{font-size:1.4rem;margin-bottom:.2rem}
+.prod .row{display:flex;justify-content:space-between;align-items:center;margin-top:.6rem}
+.prod .pr{font-weight:700;color:var(--acid)}
+.add{background:var(--ink);color:#000;border:0;padding:.5rem .8rem;font-weight:700;font-size:.78rem;text-transform:uppercase}
+.add.done{background:var(--acid)}
+.cart{position:fixed;right:20px;bottom:20px;z-index:70;background:var(--hot);color:#fff;border-radius:50px;padding:.8rem 1.2rem;font-weight:700;box-shadow:0 10px 30px #ff2e6355;transform:scale(0);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.cart.on{transform:scale(1)}
+footer{border-top:1px solid var(--line);padding:4rem 0 2rem}
+.fbig{font-size:clamp(2rem,8.4vw,8.6rem);color:transparent;-webkit-text-stroke:1px #fff3;white-space:nowrap}
+.fr{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:var(--mut);font-size:.85rem;margin-top:2rem}
+.fr a:hover{color:var(--acid)}
+@media(max-width:960px){
+ nav{position:fixed;inset:0 0 0 30%;background:#0a0a0b;flex-direction:column;padding:6rem 2rem;font-size:1.3rem;transform:translateX(100%);visibility:hidden;transition:transform .35s,visibility .35s;border-left:1px solid var(--line)}
+ nav.on{transform:none;visibility:visible}.burger{display:block;position:relative;z-index:60}.bar .cta{display:none}
+ .about,.music,.book{grid-template-columns:1fr;gap:2.5rem}
+ .gig{grid-template-columns:1fr auto;gap:.4rem 1rem}.gig .dt{grid-column:1/-1}.gig .vn{grid-column:1}.gig .tk{grid-row:2/4;grid-column:2}
+ .grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.tile.t{grid-row:span 1}
+ .shop{grid-template-columns:repeat(2,1fr)}.ig{grid-template-columns:repeat(3,1fr)}
+ form.bf{grid-template-columns:1fr;padding:1.3rem}
+ section{padding:80px 0}
+}
+@media(max-width:520px){.shop{grid-template-columns:1fr 1fr;gap:.7rem}.prod h3{font-size:1.1rem}.stats b{font-size:2rem}.mq div{font-size:1.7rem}.gig h3{font-size:1.5rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="flag">Unverbindlicher Konzept-Entwurf von Mohammad · Songs, Termine, Fotos &amp; Merch sind Platzhalter, keine offiziellen Inhalte der Band</div>
+<header id="hd"><div class="wrap bar">
+ <a href="#top" class="logo">WATERPISTOL <b>DRIVE BY</b></a>
+ <nav id="nav"><a href="#about">Über uns</a><a href="#musik">Musik</a><a href="#live">Live</a><a href="#media">Media</a><a href="#booking">Booking</a><a href="#shop">Merch</a></nav>
+ <a href="#live" class="cta">Tickets ↗</a><button class="burger" id="bg" aria-label="Menü">☰</button>
+</div></header>
+
+<section class="hero" id="top">
+ <canvas id="eq"></canvas>
+ <div class="hin wrap">
+  <div class="kick hi">Crossover · Hip Hop · Punk · Rock</div>
+  <h1><span class="hi">Waterpistol</span><span class="hi o">Drive</span><span class="hi g" data-t="By">By</span></h1>
+  <p class="sub hi">Laut, schnell, verschwitzt. Eine Band zwischen Rap-Flow und Gitarrenwand, gebaut für Festivalbühnen und Clubkeller.</p>
+  <div class="hbtn hi"><a href="#musik" class="cta ac">▶ Neue Single hören</a><a href="#live" class="cta ghost">Live-Termine</a></div>
+ </div>
+ <div class="scroll">SCROLL ↓</div>
+</section>
+<div class="mq"><div id="mqt">NEUE SINGLE „SPRITZPISTOLE“ <i>✦</i> TOUR 2027 <i>✦</i> FESTIVAL-SAISON <i>✦</i> BOOKING OFFEN <i>✦</i> MERCH DROP <i>✦</i> NEUE SINGLE „SPRITZPISTOLE“ <i>✦</i> TOUR 2027 <i>✦</i> FESTIVAL-SAISON <i>✦</i> BOOKING OFFEN <i>✦</i> MERCH DROP <i>✦</i>&nbsp;</div></div>
+
+<section id="about"><div class="wrap about">
+ <div class="rv">
+  <div class="lab">Über uns</div>
+  <h2>Kein Genre.<br><em>Nur Energie.</em></h2>
+  <p>Hier steht später eure Geschichte: wie ihr euch gefunden habt, was euch antreibt und warum eure Shows niemanden stillstehen lassen. Kurz, persönlich, mit Haltung.</p>
+  <p>Darunter: Besetzung, Einflüsse und ein Pressefoto zum Download für Veranstalter und Presse.</p>
+  <div class="stats"><div><b data-n="120">120+</b><span>Shows*</span></div><div><b data-n="38">38</b><span>Festivals*</span></div><div><b data-n="5">5</b><span>Releases*</span></div></div>
+  <p style="font-size:.75rem;color:var(--mut);margin-top:.8rem">*Beispielzahlen</p>
+ </div>
+ <div class="poster rv"><div class="ph"></div><div class="sil"><i style="height:78%"></i><i style="height:92%"></i><i style="height:84%"></i><i style="height:74%"></i></div><div class="tag">PRESSEFOTO · PLATZHALTER</div><div class="tag2">LIVE!</div></div>
+</div></section>
+
+<section id="musik" style="padding-top:40px"><div class="wrap">
+ <div class="lab rv">Musik</div><h2 class="rv">Auf <em>Repeat.</em></h2>
+ <div class="music">
+  <div class="rv"><div class="cover" id="cover"><div class="disc"></div><div class="ct"><small>NEUE EP · PLATZHALTER</small>SPRITZPISTOLE</div></div>
+   <div class="plats"><a href="#musik">Spotify</a><a href="#musik">Apple Music</a><a href="#musik">YouTube</a><a href="#musik">Bandcamp</a></div></div>
+  <div class="rv">
+   <div class="tracks" id="tracks"></div>
+   <div class="embed"><div class="sp">♫</div><div>Hier wird euer echter <b style="color:var(--ink)">Spotify-Player</b> eingebettet (Album, Single oder Artist-Profil), die Liste oben dient nur der Vorschau.</div></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="live" class="live"><div class="wrap">
+ <div class="lab rv">Live-Termine</div><h2 class="rv" style="color:#0a0a0b">On <em>Tour.</em></h2>
+ <div id="gigs"></div>
+ <p style="margin-top:1.4rem;font-size:.85rem;color:#555">Beispieltermine. Termine lassen sich im WordPress-Backend in Sekunden eintragen und verschwinden nach dem Datum automatisch.</p>
+</div></section>
+
+<section id="media"><div class="wrap">
+ <div class="lab rv">Media / Galerie</div><h2 class="rv">Laut in <em>Bildern.</em></h2>
+ <div class="grid rv" id="grid"></div>
+ <div class="ig" id="ig"></div>
+ <p style="margin-top:1rem;color:var(--mut);font-size:.85rem">Instagram-Feed: wird live mit eurem Profil verbunden.</p>
+</div></section>
+
+<section id="booking" style="background:#0e0e10"><div class="wrap book">
+ <div class="rv">
+  <div class="lab">Booking</div><h2>Bucht <em>uns.</em></h2>
+  <p style="color:#cfccc2">Für Festivals, Clubs, Stadtfeste und Privates. Anfrage absenden, Rückmeldung innerhalb von 48 Stunden.</p>
+  <ul><li>Set-Länge <b>45–90 Min.</b></li><li>Besetzung <b>4–5 Personen</b></li><li>Technik-Rider <b><a href="#booking" style="color:var(--acid)">PDF ↓</a></b></li><li>Pressekit <b><a href="#booking" style="color:var(--acid)">EPK ↓</a></b></li></ul>
+ </div>
+ <form class="bf rv" id="bf">
+  <label>Name / Veranstalter<input required placeholder="z. B. Open-Air-Festival"></label>
+  <label>E-Mail<input type="email" required placeholder="name@veranstalter.de"></label>
+  <label>Datum<input type="date" required></label>
+  <label>Ort / Location<input required placeholder="Stadt, Club"></label>
+  <label class="f">Art der Veranstaltung<select><option>Festival</option><option>Club-Show</option><option>Stadtfest</option><option>Support-Slot</option><option>Privat</option></select></label>
+  <label class="f">Nachricht<textarea rows="4" placeholder="Kapazität, Set-Länge, Gage-Rahmen …"></textarea></label>
+  <button class="cta ac f" style="justify-content:center;padding:1rem">Anfrage senden →</button>
+  <div class="ok" id="ok">✓ Danke! (Demo, im echten Formular landet die Anfrage direkt in eurem Booking-Postfach.)</div>
+ </form>
+</div></section>
+
+<section id="shop"><div class="wrap">
+ <div class="lab rv">Shop / Merch</div><h2 class="rv">Trag <em>den Lärm.</em></h2>
+ <div class="shop" id="shopg"></div>
+ <p style="margin-top:1.2rem;color:var(--mut);font-size:.85rem">Demo-Warenkorb. Im fertigen Shop über WooCommerce, mit PayPal &amp; Co.</p>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fbig">WATERPISTOL DRIVE BY</div>
+ <div class="fr"><span>© 2026 · Konzept-Entwurf (keine offizielle Seite)</span><span><a href="#top">Instagram</a> · <a href="#top">YouTube</a> · <a href="#top">Spotify</a> · <a href="#top">TikTok</a></span><span><a href="#top">Impressum</a> · <a href="#top">Datenschutz</a></span></div>
+</div></footer>
+<div class="cart" id="cart">🛒 <span id="cn">0</span> im Warenkorb</div>
+<div class="lb" id="lb"><div class="in" id="lbi"><button class="x" id="lbx">✕</button><p>Hier läuft euer YouTube-Video (Platzhalter).</p></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let lenis=null;if(window.Lenis&&!reduce){lenis=new Lenis({lerp:.1});const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf)}
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();$('#nav').classList.remove('on');lenis?lenis.scrollTo(t,{offset:-60}):t.scrollIntoView({behavior:'smooth'})}));
+$('#bg').onclick=()=>$('#nav').classList.toggle('on');
+const fh=()=>{const h=$('.flag').offsetHeight;$('#hd').style.top=scrollY>40?'0px':h+'px'};addEventListener('scroll',()=>{$('#hd').classList.toggle('s',scrollY>40);fh()},{passive:true});addEventListener('resize',fh);fh();
+// equalizer canvas
+const cv=$('#eq'),cx=cv.getContext('2d');let W,H,playing=false;
+function rs(){W=cv.width=cv.offsetWidth*devicePixelRatio;H=cv.height=cv.offsetHeight*devicePixelRatio}rs();addEventListener('resize',rs);
+function draw(t){cx.clearRect(0,0,W,H);const n=64,bw=W/n;for(let i=0;i<n;i++){const k=playing?1.6:1;const v=(Math.sin(t/380+i*.45)*.5+.5)*(Math.sin(t/900+i*.13)*.5+.5)*k;const h=H*.08+v*H*.42;const g=cx.createLinearGradient(0,H,0,H-h);g.addColorStop(0,'rgba(255,46,99,.9)');g.addColorStop(1,'rgba(215,255,31,.15)');cx.fillStyle=g;cx.fillRect(i*bw+bw*.18,H-h,bw*.64,h)}if(!reduce)requestAnimationFrame(draw)}requestAnimationFrame(draw);
+// tracks
+const T=[['Spritzpistole','Single · 2026','3:12'],['Drive By Love','EP · 2026','2:58'],['Beton & Konfetti','EP · 2026','3:41'],['Pogo im Regen','EP · 2026','2:34'],['Kein Genre','Live-Version','4:05']];
+$('#tracks').innerHTML=T.map((x,i)=>`<div class="tr" data-i="${i}"><div class="pb">▶</div><div><b>${x[0]}</b><small>${x[1]} · Platzhalter-Titel</small></div><div class="bars"><i></i><i></i><i></i><i></i></div><div class="d">${x[2]}</div></div>`).join('');
+$$('.tr').forEach(r=>r.onclick=()=>{const on=!r.classList.contains('on');$$('.tr').forEach(x=>{x.classList.remove('on');x.querySelector('.pb').textContent='▶'});if(on){r.classList.add('on');r.querySelector('.pb').textContent='❚❚'}playing=on;$('#cover').classList.toggle('on',on)});
+// gigs
+const G=[['14','MÄR 2027','Hannover','Club-Keller (Beispiel)','CLUB',0],['02','MAI 2027','Hamburg','Hafenbühne (Beispiel)','SUPPORT',0],['21','JUN 2027','Open-Air Nord','Festival-Gelände (Beispiel)','FESTIVAL',0],['09','JUL 2027','Bremen','Stadtfest-Bühne (Beispiel)','STADTFEST',1],['30','AUG 2027','Wedemark','Heimspiel (Beispiel)','HEIMSPIEL',0]];
+$('#gigs').innerHTML=G.map(g=>`<div class="gig rv"><div class="dt">${g[0]}<small>${g[1]}</small></div><h3>${g[2]}<span class="typ">${g[4]}</span></h3><div class="vn">${g[3]}</div><button class="tk ${g[5]?'so':''}">${g[5]?'Ausverkauft':'Tickets'}</button></div>`).join('');
+// media
+const arts=['conic-gradient(from 90deg at 30% 60%,#ff2e63,#0a0a0b,#d7ff1f,#0a0a0b,#ff2e63)','radial-gradient(circle at 70% 30%,#2ef2ff,#0a0a0b 60%)','linear-gradient(135deg,#d7ff1f,#ff2e63)','repeating-linear-gradient(45deg,#111 0 14px,#ff2e63 14px 16px)','radial-gradient(circle at 30% 70%,#ff2e63,#160309 65%)','linear-gradient(200deg,#2ef2ff,#0a0a0b 70%)','conic-gradient(#d7ff1f,#0a0a0b,#2ef2ff,#0a0a0b,#d7ff1f)'];
+const M=[['w','Musikvideo · Spritzpistole',1],['t','Live · Open Air',0],['','Backstage',0],['','Studio',0],['','Crowd',1],['w','Tour-Tagebuch',0],['','Soundcheck',0]];
+$('#grid').innerHTML=M.map((m,i)=>`<div class="tile ${m[0]}" data-v="${m[2]}"><div class="art" style="background:${arts[i%arts.length]}"></div>${m[2]?'<div class="yt"><b>▶</b></div>':''}<span>${m[1]}</span></div>`).join('');
+$$('.tile').forEach(t=>t.onclick=()=>{$('#lbi').style.background=t.querySelector('.art').style.background;$('#lbi p').textContent=t.dataset.v==='1'?'Hier läuft euer YouTube-Video (Platzhalter).':'Galerie-Ansicht: hier erscheint das Foto in voller Größe (Platzhalter).';$('#lb').classList.add('on')});
+$('#lbx').onclick=()=>$('#lb').classList.remove('on');$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').classList.remove('on')};
+$('#ig').innerHTML=arts.slice(0,6).map(a=>`<a href="#media" style="background:${a}"></a>`).join('');
+// shop
+const shirt=c=>`<svg viewBox="0 0 100 100"><path d="M30 12 L42 8 Q50 16 58 8 L70 12 L90 28 L80 40 L72 34 L72 92 L28 92 L28 34 L20 40 L10 28 Z" fill="${c}" stroke="#000" stroke-width="1.5"/><text x="50" y="56" text-anchor="middle" font-family="Anton" font-size="11" fill="${c==='#111'?'#d7ff1f':'#111'}">WDB</text></svg>`;
+const hood=c=>`<svg viewBox="0 0 100 100"><path d="M34 14 Q50 2 66 14 L88 30 L80 46 L72 40 L72 92 L28 92 L28 40 L20 46 L12 30 Z" fill="${c}" stroke="#000" stroke-width="1.5"/><path d="M40 14 Q50 30 60 14" fill="none" stroke="#000" stroke-width="1.5"/><rect x="38" y="66" width="24" height="12" rx="2" fill="none" stroke="#000"/></svg>`;
+const P=[['Logo Tee',shirt('#111'),'25 €','NEU'],['Neon Tee',shirt('#d7ff1f'),'25 €',''],['Tour Hoodie',hood('#ff2e63'),'49 €','LIMITED'],['EP auf Vinyl','<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#111" stroke="#333"/><circle cx="50" cy="50" r="13" fill="#ff2e63"/><circle cx="50" cy="50" r="2" fill="#000"/></svg>','22 €','']];
+$('#shopg').innerHTML=P.map(p=>`<div class="prod rv"><div class="pi">${p[3]?`<span class="badge">${p[3]}</span>`:''}${p[1]}</div><h3>${p[0]}</h3><small style="color:var(--mut)">Beispielprodukt</small><div class="row"><span class="pr">${p[2]}</span><button class="add">+ Warenkorb</button></div></div>`).join('');
+let cn=0;$$('.add').forEach(b=>b.onclick=()=>{cn++;$('#cn').textContent=cn;$('#cart').classList.add('on');b.classList.add('done');b.textContent='✓ Drin';if(window.gsap)gsap.fromTo('#cart',{scale:1.3},{scale:1,duration:.4})});
+$('#bf').onsubmit=e=>{e.preventDefault();$('#ok').style.display='block'};
+// motion
+if(window.gsap&&!reduce){gsap.registerPlugin(ScrollTrigger);if(lenis)lenis.on('scroll',ScrollTrigger.update);
+ gsap.from('.hi',{y:80,opacity:0,stagger:.12,duration:1.1,ease:'power4.out'});
+ gsap.to('.hin',{yPercent:30,opacity:.2,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+ gsap.to('#mqt',{xPercent:-50,repeat:-1,duration:18,ease:'none'});
+ gsap.to('.poster',{rotate:-3,y:-40,ease:'none',scrollTrigger:{trigger:'.poster',start:'top bottom',end:'bottom top',scrub:true}});
+ $$('.rv').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%'}}));
+ $$('[data-n]').forEach(el=>{const o={v:0};ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>gsap.to(o,{v:+el.dataset.n,duration:1.6,ease:'power2.out',onUpdate:()=>el.textContent=Math.round(o.v)+(el.dataset.n>50?'+':'')})})});
+}else{$$('.rv').forEach(e=>{e.style.opacity=1;e.style.transform='none'});$$('[data-n]').forEach(e=>e.textContent=e.dataset.n)}
+</script>
+</body>
+</html>
